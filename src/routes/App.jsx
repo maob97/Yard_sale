@@ -9,7 +9,7 @@ import MyAccount from '../pages/MyAccount';
 import CreateAccount from '../pages/CreateAccount';
 import Checkout from '../pages/Checkout';
 import Orders from '../pages/Orders';
-import RecoveryPassword from '../pages/RecoveryPassword';
+import PasswordRecovery from '../pages/PasswordRecovery';
 import NotFound from '../pages/NotFound';
 import '../styles/global.css';
 
@@ -21,7 +21,7 @@ const App = () => {
                 <Route path='/'                    element= {<Home />} />
                 <Route path='/login'               element= {<Login />} />
                 <Route path='/send-email'          element= {<SendEmail />} />
-                <Route path='/recovery-password'   element= {<RecoveryPassword />} />
+                <Route path='/password-recovery'   element= {<PasswordRecovery />} />
                 <Route path='/new-password'        element= {<NewPassword />} />
                 <Route path='/my-account'          element= {<MyAccount />} />
                 <Route path='/create-account'      element= {<CreateAccount />} />
