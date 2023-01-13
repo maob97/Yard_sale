@@ -10,14 +10,16 @@ module.exports = {
         publicPath: '/'
     },
     resolve: {
-        extensions: ['.js' , '.jsx'],
+        extensions: ['.js', '.jsx'],
         alias: {
             '@components': path.resolve(__dirname, 'src/components/'),
             '@containers': path.resolve(__dirname, 'src/container/'),
-            '@styles':     path.resolve(__dirname, 'src/styles/'),
-            '@icons':      path.resolve(__dirname, 'src/assets/icons/'),
-            '@logos':      path.resolve(__dirname, 'src/assets/logos/'),
-            '@hooks':      path.resolve(__dirname, 'src/hooks/'),
+            '@styles': path.resolve(__dirname, 'src/styles/'),
+            '@icons': path.resolve(__dirname, 'src/assets/icons/'),
+            '@logos': path.resolve(__dirname, 'src/assets/logos/'),
+            '@hooks': path.resolve(__dirname, 'src/hooks/'),
+            '@context': path.resolve(__dirname, 'src/context/'),
+            '@pages': path.resolve(__dirname, 'src/pages/')
         }
     },
     mode: 'development',
@@ -31,12 +33,12 @@ module.exports = {
                 }
             },
             {
-            test: /\.html$/,
-            use: [
-                {
-                    loader: 'html-loader',
-                }
-            ]
+                test: /\.html$/,
+                use: [
+                    {
+                        loader: 'html-loader',
+                    }
+                ]
             },
             {
                 test: /\.(css|s[ac]ss)$/i,
@@ -47,8 +49,8 @@ module.exports = {
                 ],
             },
             {
-                test:/\.(png|svg|jpg|gif)$/,
-                type:'asset'
+                test: /\.(png|svg|jpg|gif)$/,
+                type: 'asset'
             },
         ]
     },
@@ -63,7 +65,7 @@ module.exports = {
     ],
     devServer: {
         static: {
-        directory: path.join(__dirname, 'public'),
+            directory: path.join(__dirname, 'public'),
         },
         compress: true,
         port: 3005,
